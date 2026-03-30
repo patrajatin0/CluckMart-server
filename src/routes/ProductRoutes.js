@@ -39,7 +39,7 @@ ProductRouter.delete("/product/:id", async (req, res) => {
 
     }
 })
-ProductRouter.get("/product", Authentication, async (req, res) => {
+ProductRouter.get("/product", async (req, res) => {
     try {
         const product = await Product.find({})
         res.send(product)
