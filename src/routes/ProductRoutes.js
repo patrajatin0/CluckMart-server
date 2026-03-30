@@ -4,7 +4,7 @@ import Authentication from "../middleware/authencticaion.js"
 
 const ProductRouter = express.Router()
 
-ProductRouter.post("/product", Authentication, async (req, res) => {
+ProductRouter.post("/product", async (req, res) => {
     const { name, price, category, description, imageUrl, inStock } = req.body
     try {
         const products = new Product({
